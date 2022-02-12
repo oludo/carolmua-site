@@ -106,4 +106,16 @@
     </ul>
   </section>
   {{end}}
+
+  {{with .Site.Data.Socials}}
+    <section class="social">
+      <ul>
+        {{range $i, $s := .}}
+          <li>
+            {{- partial "article_social.html" $s -}}
+          </li>  
+        {{end}}
+      </ul>
+    </section>
+  {{end}}
 {{end}}

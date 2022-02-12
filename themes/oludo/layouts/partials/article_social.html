@@ -1,0 +1,11 @@
+<article class="social">
+  {{with .Title}}
+  <header>
+    <h3 class="title h3">{{. | safeHTML}}</h3>
+  </header>
+  {{end}}
+
+  <a href="{{.Href | safeURL}}" target="_blank" rel="noreferrer">
+    <img src="{{.Icon}}" alt="{{.Title}}">
+  </a>
+</article>
