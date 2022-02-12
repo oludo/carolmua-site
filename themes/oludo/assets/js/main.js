@@ -1,4 +1,4 @@
-document.querySelectorAll(".btn.lead").forEach(btn => {
+document.querySelectorAll(".lead").forEach(btn => {
   btn.addEventListener("click", function(e){
     if (fbq) {
       fbq("track", "Lead");
