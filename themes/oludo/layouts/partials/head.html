@@ -7,6 +7,10 @@
   {{- template "_internal/opengraph.html" . -}}
   {{- template "_internal/twitter_cards.html" . -}}
 
+  {{with .Site.Params.FBDomainVerification}}
+    <meta name="facebook-domain-verification" content="{{.}}" />
+  {{end}}
+  
   <!-- Meta Pixel Code -->
   {{with .Site.Params.Pixel}}
   <script>
