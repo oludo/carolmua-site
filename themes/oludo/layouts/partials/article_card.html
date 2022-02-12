@@ -1,0 +1,11 @@
+<article class="card">
+  {{with .Image}}
+    <img src="{{.Src}}" alt="{{.Alt}}" />
+  {{end}} 
+  
+  <header>
+    <h3 class="title h3">{{.Title | safeHTML}}</h3>
+  </header>
+
+  <p>{{.Text | safeHTML}}</p>
+</article>

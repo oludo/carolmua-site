@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "pt-br" }}">
+  {{- partial "head.html" . -}}
+  
+  <body>
+    {{- partial "header.html" . -}}
+
+    <aside>
+      {{with .Site.Data.Contacts.WhatsAppFloating}}
+        {{- partial "article_whatsapp.html" . -}}
+      {{end}}
+    </aside>
+    
+    <main id="main">
+      {{- block "main" . }}{{- end }}
+    </main>
+    
+    {{- partial "footer.html" . -}}
+  </body>
+</html>

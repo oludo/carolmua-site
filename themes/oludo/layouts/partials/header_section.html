@@ -1,0 +1,12 @@
+<header>
+  {{if .CatchPhrase}}
+    <h2 class="subtitle">{{.Title | safeHTML}}</h2>
+    <p class="title h2">{{.CatchPhrase | safeHTML}}</p>
+  {{else}}
+    <h2 class="title h2">{{.Title | safeHTML}}</h2>
+  {{end}}
+  
+  {{with .Description}}
+    <p class="description">{{. | safeHTML}}</p>
+  {{end}}
+</header>

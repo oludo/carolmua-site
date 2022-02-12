@@ -1,0 +1,109 @@
+{{define "main"}}
+  {{with .Params.Words}}
+    <ul class="words">
+      {{ range . }}
+        <li class="words_word">{{ . }}</li>
+      {{ end }}
+    </ul>
+  {{end}}
+
+  {{with .Params.Problem}}
+  <section class="problem">
+    <img src="/images/{{.Image.File}}" alt="{{.Image.Name}}">
+    
+    {{- partial "header_section.html" . -}}
+  
+    <p>{{.Text | safeHTML}}</p>
+  </section>
+  {{end}}
+
+  {{with .Params.How}}
+  <section class="how">
+    {{- partial "header_section.html" . -}}
+  
+    <ul class="cols">
+      {{range $i, $card := .Cards}}
+      <li>
+        {{- partial "article_card.html" $card -}}
+      </li>
+      {{end}}
+    </ul>
+  </section>
+  {{end}}
+  
+  {{with .Params.Case}}
+  {{with (index site.Data.Cases .)}}
+  <section class="case">
+    {{- partial "header_section.html" . -}}
+  
+    {{- partial "article_case.html" . -}}
+  </section>
+  {{end}}
+  {{end}}
+
+  {{with .Params.Workflow}}
+  <section class="workflow">
+    {{- partial "header_section.html" . -}}
+  
+    <ul class="cols">
+      {{range $i, $card := .Cards}}
+      <li>
+        {{- partial "article_card.html" $card -}}
+      </li>
+      {{end}}
+    </ul>
+  </section>
+  {{end}}
+
+  {{with .Params.Who}}
+  <section class="who">
+    <img src="/images/{{.Image.File}}" alt="{{.Image.Name}}">
+    
+    {{- partial "header_section.html" . -}}
+  
+    <p>{{.Text | safeHTML}}</p>
+  </section>
+  {{end}}
+
+  {{with .Params.Offer}}
+  <section class="offer">
+    {{- partial "header_section.html" . -}}
+  
+    {{.Promisse | safeHTML}}
+    
+    <a class="btn lead" href="{{.CallToAction.Href}}" role="button" target="_blank" rel="noreferrer">{{.CallToAction.Text}}</a>
+  </section>
+  {{end}}
+
+  {{with .Params.Objections}}
+  <section class="objections">
+    {{- partial "header_section.html" . -}}
+  
+    <ul class="col">
+      {{range $i, $q := .Questions}}
+      <li>
+        {{- partial "article_objection.html" $q -}}
+      </li>
+      {{end}}
+    </ul>
+  </section>
+  {{end}}
+
+  {{with .Site.Data.Contacts}}
+  <section class="contacts">
+    <header>
+      <h2 class="title h2">Contatos</h2>
+    </header>
+  
+    <ul class="col">
+      {{range $i, $c := .}}
+        {{if not (eq $c.Title "WhatsAppFloating")}}
+        <li>
+          {{- partial "article_contact.html" $c -}}
+        </li>      
+        {{end}}
+      {{end}}
+    </ul>
+  </section>
+  {{end}}
+{{end}}

@@ -1,0 +1,23 @@
+baseURL = 'https://www.carolduartemua.com.br'
+languageCode = 'pt-br'
+title = 'Carol Duarte'
+theme = 'oludo'
+enableRobotsTXT = true
+
+[params]
+# Pixel = "337191138296175"
+# GTags = ['G-WTWXJMGSBH']
+
+# [menu]
+#   [[menu.main]]
+#     identifier = ''
+#     name = 'Home'
+#     url = '/'
+#     weight = -200
+    
+#   [[menu.main]]
+#     identifier = 'contacts'
+#     name = 'Contatos'
+#     url = '#contacts'
+#     weight = -110
+    

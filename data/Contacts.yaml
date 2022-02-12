@@ -1,0 +1,17 @@
+WhatsApp:
+  Title: WhatsApp
+  Text: (21) 98074-5428
+  Href: https://api.whatsapp.com/send/?phone=5521980745428&text=Ol%C3%A1%2C+gostaria+de+saber+mais&app_absent=0
+  Icon: /images/icons/whatsapp.svg
+
+Telephone:
+  Title: Telefone
+  Text: (21) 98074-5428
+  Href: tel:+5521980745428
+  Icon: /images/icons/telephone.svg
+
+WhatsAppFloating:
+  Title: WhatsAppFloating
+  Text: (21) 98074-5428
+  Href: https://api.whatsapp.com/send/?phone=5521980745428&text=Ol%C3%A1%2C+gostaria+de+saber+mais&app_absent=0
+  Icon: /images/icons/wp_btn.svg

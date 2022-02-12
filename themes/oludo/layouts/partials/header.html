@@ -1,0 +1,44 @@
+<header class="main">
+  <!-- <article class="navbar">
+    <span class="logo">{{.Name}}</span>
+    
+    <nav>
+      <span id="menu-btn"></span>
+      
+      <ul id="navbar">
+        <li><a href="/">Home</a></li>
+        <li><a href="#contacts">Contatos</a></li>
+      </ul>
+    </nav>
+  </article> -->
+
+  <nav class="navbar">
+    <span class="logo">{{.Site.Title}}</span>
+    
+    {{if .Site.Menus.main}}
+    <span class="menu" id="navbar_menu"></span>
+      
+    <ul id="navbar_list">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{.URL}}">{{.Name}}</a></li>
+      {{end}}
+    </ul>
+    {{end}}
+  </nav>
+
+  <script>
+    document.getElementById("navbar_menu").addEventListener("click", function() {
+      document.getElementById("navbar_list").classList.toggle("open");
+      document.getElementById("navbar_menu").classList.toggle("open");
+    });
+  </script>
+
+  {{with .Params.Hero}}
+  <section class="hero">
+    <h1 class="subtitle">{{.Title}}</h1>
+    <p class="title h1">{{.CatchPhrase | safeHTML}}</p>
+    <p class="description">{{.Promisse | safeHTML}}</p>
+    <a class="btn lead" href="{{.CallToAction.Href}}" role="button" target="_blank" rel="noreferrer">{{.CallToAction.Text}}</a>
+  </section>  
+  {{end}}
+</header>

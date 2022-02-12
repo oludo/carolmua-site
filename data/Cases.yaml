@@ -1,0 +1,13 @@
+Home:
+  Title: Aluna do Curso
+  CatchPhrase: Olhos profundos
+  Description: A maquiagem errada pode piorar aquilo que você não gosta
+  Quote: >-
+    <p>Eu me maquiava errado e não sabia!</p>
+    <p>A diferença foi enorme quando aprendi a preencher meus olhos do jeito certo.</p>
+  Person:
+    Name: <p><b>Joana Daqui</b></p>
+    Designation: <p>Dona de belos olhos</p>
+    Avatar: 
+      Src: /images/case.jpg
+      Alt: Caso de maquiagem
