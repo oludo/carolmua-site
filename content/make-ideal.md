@@ -24,7 +24,7 @@ Offer:
   Promisse: >-
     <p>Muito menos do que realmente vale porque nunca vamos parar de colocar novos conteúdos!</p> 
 
-    <p>Aproveite agora, enquanto o ingresso na comunidade é de <em>apenas R$220,00.</em></p>
+    <p>Aproveite agora, enquanto o ingresso na comunidade é de <em>apenas R$440,00.</em></p>
   CallToAction:
     Title: WhatsApp
     Text: Quero Entrar
