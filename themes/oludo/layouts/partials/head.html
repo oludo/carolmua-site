@@ -50,5 +50,5 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
   {{ $js := resources.Get "/js/main.js" | minify | fingerprint }}
-  <script src="{{ $js.RelPermalink }}"></script>
+  <script src="{{ $js.RelPermalink }}" defer></script>
 </head>

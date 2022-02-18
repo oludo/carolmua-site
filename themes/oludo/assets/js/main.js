@@ -1,7 +1,7 @@
 document.querySelectorAll(".lead").forEach(btn => {
   btn.addEventListener("click", function(e){
     if (fbq) {
-      fbq("track", "Lead");
+      fbq("track", "Contact");
     }
 
     if (gtag) {
